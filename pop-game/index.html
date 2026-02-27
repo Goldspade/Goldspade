@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>像素泡泡堂·优化版</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="title">像素泡泡堂·优化版</div>
+    <div id="hud">
+        <div>命 <span id="life" class="life">3</span></div>
+        <div>敌 <span id="en">3</span></div>
+        <div>力 <span id="pw">1</span></div>
+        <div>速 <span id="sp">1</span></div>
+        <div>爆 <span id="bt">1.0x</span></div>
+        <div>弹 <span id="bm">1</span></div>
+    </div>
+    <div id="game">
+        <canvas id="c" width="320" height="320"></canvas>
+        <div id="start" class="overlay">
+            <div class="tip">WASD/方向键移动 空格放弹</div>
+            <div class="tip">蓝=威力 绿=速度 橙=爆速 紫=炸弹数</div>
+            <button onclick="game.start()">开始</button>
+        </div>
+        <div id="over" class="overlay hide">
+            <div id="msg"></div>
+            <button onclick="game.start()">重开</button>
+        </div>
+    </div>
+
+<script src="js/object.js"></script>
+<script src="js/game_manager.js"></script>
+</body>
+</html>
